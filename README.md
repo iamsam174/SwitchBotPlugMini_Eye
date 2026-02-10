@@ -10,7 +10,7 @@
 ---
 
 ## 📥 ダウンロード
-[こちらのリリースページ](https://github.com/あなたのユーザー名/リポジトリ名/releases/latest) から、最新の **EXEファイル** と **かんたんガイド(PDF)** をダウンロードできます。
+右側の **[Releases]** セクション、または [こちらのリリースページ](https://github.com/iamsam174/SwitchBotPlugMini_Eye/releases/latest) から、最新の **EXEファイル** と **かんたんガイド(PDF)** をダウンロードできます。
 
 ---
 
