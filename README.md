@@ -3,9 +3,8 @@
 [![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-マウス操作、または視線入力デバイス（Eye Tracker）を使用して **SwitchBot プラグミニ** を直感的に制御するためのWindows用アプリケーションです。
-
-大きな操作パネルと複数の動作モードを備えており、肢体不自由・者のスイッチ操作支援や、特定の作業中に手を離さずに家電を制御するハンズフリー用途を想定して設計されています。
+重度肢体不自由児・者が視線入力デバイス（Tobii Eye Tracker 5など）やアクセシビリティスイッチ入力でマウスクリックできるインターフェイスを使用して、SwitchBotプラグミニに接続された家電品を操作するためのWindowsアプリです。
+大きな操作パネルと複数の動作モードを備えており、重度肢体不自由・者のスイッチ操作支援や、特定の作業中に手を離さずに家電を制御するハンズフリー用途を想定して設計されています。
 
 ---
 
