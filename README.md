@@ -10,7 +10,7 @@
 ---
 
 ## 📺 使い方動画（YouTube）
-[こちらから操作の様子をご覧いただけます]([https://youtu.be/TDidwv3S9KU])
+[こちらから操作の様子をご覧いただけます](https://youtu.be/TDidwv3S9KU)
 
 ---
 
