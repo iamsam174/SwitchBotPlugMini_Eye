@@ -16,6 +16,7 @@
 
 ## 📥 ダウンロード
 右側の **[Releases]** セクション、または [こちらのリリースページ](https://github.com/iamsam174/SwitchBotPlugMini_Eye/releases/latest) から、最新の **EXEファイル** と **かんたんガイド(PDF)** をダウンロードできます。
+お使いのWindowsPCのセキュリティ対策によって **EXEファイル** がダウンロードできない場合、SwitchBotPlugMini_Eye_v1.0.0.zipをダウンロードして解凍すれば exeファイル が使えるようになります。
 
 ---
 
