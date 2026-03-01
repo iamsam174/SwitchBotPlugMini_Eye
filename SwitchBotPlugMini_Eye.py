@@ -134,7 +134,7 @@ class App:
         self.cv.bind("<Leave>", lambda e: self.lev())
 
         # ヘルプテキストの更新
-        self.lbl_esc = tk.Label(self.root, text="※スイッチONボタンはマウスドラッグで移動可 / [F11]キー:全画面表示切替 / [1][2][3]キー:動作モード切替 / [←][→]:タイマー秒数設定", font=f_b, bg="#f0f0f0", fg="#555")
+        self.lbl_esc = tk.Label(self.root, text="※スイッチONボタンはマウスドラッグで移動可 / [F11]キー:全画面表示切替 / [1][2][3]キー:動作モード切替 / [←][→]キー:タイマー秒数設定", font=f_b, bg="#f0f0f0", fg="#555")
         self.lbl_esc.pack(side="bottom", pady=10)
 
     def on_start_drag(self, event):
@@ -209,6 +209,7 @@ class App:
                 try:
                     self.client = BleakClient(self.target_mac); await self.client.connect()
                     self.up_s("接続完了", "green")
+                    self.play_sound()
                 except Exception: self.up_s("再試行中...", "red")
 
     def up_s(self, t, c):
@@ -226,6 +227,7 @@ class App:
                     found.append(d.address); nms.append(f"{n} ({d.address})")
                 self.root.after(0, lambda: self.update_dev_list(nms, found))
                 self.up_s("完了", "black")
+                self.play_sound()
             except Exception: pass
         asyncio.run_coroutine_threadsafe(do(), self.loop)
 
@@ -246,17 +248,23 @@ class App:
     def ent(self):
         if self.mode.get() == 2: self.run_t()
         elif self.mode.get() == 3:
+            if not self.is_running:
+                self.is_running = True
+                self.play_sound()
             self.send(True); self.cv.itemconfig(self.id_t, text="実行中", fill="#FFFFFF")
             self.cv.config(highlightbackground="#F44336", bg="#F44336")
     def lev(self):
         if self.mode.get() == 3:
+            if self.is_running:
+                self.is_running = False
+                self.play_sound()
             self.send(False); self.cv.itemconfig(self.id_t, text="スイッチON", fill="#333333")
             self.cv.config(highlightbackground="#689f38", bg="#b2e2a2")
 
     def run_t(self):
         if self.is_running: return
         self.is_running = True; self.send(True)
-        if self.sound.get(): winsound.Beep(800, 200)
+        self.play_sound()
         self.remaining = self.sc_t.get()
         self.cv.config(highlightbackground="#F44336", bg="#F44336")
         self.cv.itemconfig(self.id_t, fill="#FFFFFF")
@@ -269,10 +277,15 @@ class App:
         else: self.fin_t()
 
     def fin_t(self):
+        self.play_sound()
         self.send(False)
         self.cv.itemconfig(self.id_t, text="スイッチON", fill="#333333")
         self.cv.config(highlightbackground="#689f38", bg="#b2e2a2")
         self.is_running = False
+
+    def play_sound(self):
+        if self.sound.get():
+            winsound.PlaySound("SystemAsterisk", winsound.SND_ALIAS | winsound.SND_ASYNC)
 
 if __name__ == "__main__":
     r = tk.Tk(); a = App(r); r.mainloop()
