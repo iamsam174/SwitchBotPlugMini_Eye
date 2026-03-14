@@ -15,7 +15,7 @@
 ---
 
 ## 📥 ダウンロード
-右側の **[Releases]** セクション、または [こちらのリリースページ](https://github.com/iamsam174/SwitchBotPlugMini_Eye/releases/latest) から、アプリの最新版が入った **zipファイル** がダウンロードできます。
+右側の **[Releases]** セクション、または [こちらのリリースページ](https://github.com/iamsam174/SwitchBotPlugMini_Eye/releases/latest) から、かんたんガイド **SwitchBotPlugMini_Eye.pdf** と最新版のアプリが入った **zipファイル** がダウンロードできます。
 ダウンロードした **zipファイル** を解凍すれば、アプリ **SwitchBotPlugMini_Eye.exe** が使えるようになります。
 
 ---
